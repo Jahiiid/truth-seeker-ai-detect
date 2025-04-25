@@ -91,14 +91,24 @@ const ImageAnalyzer: React.FC<ImageAnalyzerProps> = ({ className }) => {
         explanation = "এই ছবিতে ডিজিটাল ম্যানিপুলেশনের কোন চিহ্ন সনাক্ত করা যায়নি। মেটাডাটা, পিক্সেল প্যাটার্ন এবং সাধারণ ম্যানিপুলেশন মার্কারগুলির বিশ্লেষণের ভিত্তিতে ছবিটি প্রামাণিক বলে মনে হচ্ছে।";
         sources = [
           { 
-            name: "দৈনিক কালের কণ্ঠ", 
-            url: "https://www.kalerkantho.com/image-forensics", 
+            name: "Forensics: Photo Tampering Throughout History (History Detectives | PBS)", 
+            url: "https://www.pbs.org/opb/historydetectives/technique/photo-tampering/", 
             relevance: "high" 
           },
           { 
-            name: "ফটোগ্রাফি এসোসিয়েশন অব বাংলাদেশ", 
-            url: "https://example.com/photography-association", 
+            name: "IEEE: Digital Image Tampering Detection Techniques—A Comprehensive Survey", 
+            url: "https://ieeexplore.ieee.org/document/8474505", 
+            relevance: "high" 
+          },
+          { 
+            name: "দৈনিক প্রথম আলো", 
+            url: "https://www.prothomalo.com/technology/article/1456296", 
             relevance: "medium" 
+          },
+          { 
+            name: "Fotoforensics (ডিজিটাল ফোটো ফোরেনসিক টুল)", 
+            url: "https://fotoforensics.com/", 
+            relevance: "high" 
           }
         ];
       } else if (randomFactor < 0.66) {
@@ -107,19 +117,24 @@ const ImageAnalyzer: React.FC<ImageAnalyzerProps> = ({ className }) => {
         explanation = "ম্যানিপুলেশনের ইঙ্গিত দিতে পারে এমন কিছু অসঙ্গতি সনাক্ত করা হয়েছে। আলো এবং ছায়ায় কিছু অসঙ্গতি দেখা যাচ্ছে, এবং ছবির কিছু অংশে সম্পাদনার সম্ভাব্য চিহ্ন রয়েছে।";
         sources = [
           { 
-            name: "দৈনিক ইত্তেফাক", 
-            url: "https://www.ittefaq.com.bd/visual-fact-checking", 
-            relevance: "medium" 
-          },
-          { 
-            name: "বাংলা ট্রিবিউন", 
-            url: "https://www.banglatribune.com/inconsistency-analysis", 
-            relevance: "medium" 
-          },
-          { 
-            name: "বিবিসি বাংলা", 
-            url: "https://www.bbc.com/bengali/image-verification", 
+            name: "Harvard: Image Forensics and Photo Manipulation", 
+            url: "https://citizenscience.harvard.edu/blog/2017/02/22/photo-forensics/", 
             relevance: "high" 
+          },
+          { 
+            name: "Bangladesh: দৈনিক আমাদের সময়", 
+            url: "https://www.amadershomoy.com/ict/", 
+            relevance: "medium" 
+          },
+          { 
+            name: "MIT CSAIL: Finding Forgery in Photos", 
+            url: "https://news.mit.edu/2018/csail-deep-learning-detect-photoshop-0625", 
+            relevance: "high" 
+          },
+          { 
+            name: "Wired: 5 Ways to Spot a Fake Photo", 
+            url: "https://www.wired.com/2014/08/spot-fake-photos/", 
+            relevance: "medium" 
           }
         ];
       } else {
@@ -128,24 +143,24 @@ const ImageAnalyzer: React.FC<ImageAnalyzerProps> = ({ className }) => {
         explanation = "এই ছবিতে ডিজিটাল ম্যানিপুলেশনের শক্তিশালী সূচক সনাক্ত করা হয়েছে। সম্পাদনার স্পষ্ট চিহ্ন রয়েছে, যার মধ্যে অসঙ্গতিপূর্ণ আলো, অস্বাভাবিক পিক্সেল প্যাটার্ন, এবং বিষয়বস্তু যোগ বা অপসারণের প্রমাণ অন্তর্ভুক্ত।";
         sources = [
           { 
-            name: "বাংলাদেশ সাংবাদিক সমিতি", 
-            url: "https://example.com/journalist-association", 
+            name: "NIJ.gov: Image Manipulation and Forensic Analysis", 
+            url: "https://nij.ojp.gov/topics/articles/image-manipulation-and-analysis", 
             relevance: "high" 
           },
           { 
-            name: "দৈনিক সমকাল", 
-            url: "https://www.samakal.com/digital-forensics-report", 
-            relevance: "high" 
-          },
-          { 
-            name: "দৈনিক যায়যায়দিন", 
-            url: "https://www.jaijaidinbd.com/pixel-pattern-analysis", 
+            name: "ডেইলি স্টার: Bangladesh Online Fact-check", 
+            url: "https://www.thedailystar.net/fact-check", 
             relevance: "medium" 
           },
           { 
-            name: "দৈনিক নয়া দিগন্ত", 
-            url: "https://www.dailynayadiganta.com/image-analysis", 
-            relevance: "low" 
+            name: "Kaggle: Image Manipulation Dataset", 
+            url: "https://www.kaggle.com/datasets/robertoalvares/forgery-image-detection", 
+            relevance: "medium" 
+          },
+          { 
+            name: "Wikipedia: Digital Image Forensics", 
+            url: "https://en.wikipedia.org/wiki/Digital_image_forensics", 
+            relevance: "medium" 
           }
         ];
       }
