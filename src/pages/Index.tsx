@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -7,7 +6,6 @@ import TabContent from '@/components/TabContent';
 import HowItWorks from '@/components/HowItWorks';
 import About from '@/components/About';
 import FoundersProfile from '@/components/FoundersProfile';
-import DemoNewsDataset from '@/components/DemoNewsDataset.jsx';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Index = () => {
@@ -18,15 +16,7 @@ const Index = () => {
       <Header />
       <main className="flex-grow">
         <Hero />
-        {/* নতুন ডেমো ডাটাসেট সেকশন */}
-        <section>
-          <div className="container mx-auto">
-            <div className="my-12">
-              {/* DemoNewsDataset কম্পোনেন্ট এখানে যুক্ত */}
-              <DemoNewsDataset />
-            </div>
-          </div>
-        </section>
+        {/* বাংলাদেশের ডেমো ডাটাসেট সেকশনটি রিমুভ করা হয়েছে */}
         {/* আগের analyzeContent, TabContent এবং অন্যান্য সেকশন */}
         
         <section id="content-analyzer" className="py-16 px-4">
@@ -48,4 +38,3 @@ const Index = () => {
 };
 
 export default Index;
-

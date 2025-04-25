@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { Textarea } from './ui/textarea';
@@ -6,6 +5,7 @@ import { Alert, AlertDescription, AlertTitle } from './ui/alert';
 import { Loader2 } from 'lucide-react';
 import VerificationResult from './VerificationResult';
 import { useLanguage } from '@/contexts/LanguageContext';
+import DemoNewsDataset from './DemoNewsDataset.jsx';
 
 interface TextAnalyzerProps {
   className?: string;
@@ -77,6 +77,10 @@ const TextAnalyzer: React.FC<TextAnalyzerProps> = ({ className }) => {
             relevance: s.relevance as 'high' | 'medium' | 'low'
           }))}
         />
+        {/* বিশ্লেষণের পর নিচে ডেমো বাংলা সংবাদ ডেটাসেট দেখানো হচ্ছে */}
+        <div className="mt-8">
+          <DemoNewsDataset />
+        </div>
         <div className="mt-4">
           <Button onClick={() => setResult(null)} variant="outline">
             {t('newAnalysis')}
