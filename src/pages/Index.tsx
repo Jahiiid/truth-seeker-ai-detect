@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -17,6 +16,19 @@ const Index = () => {
       <Header />
       <main className="flex-grow">
         <Hero />
+        {/* নতুন ডেমো ডাটাসেট সেকশন */}
+        <section>
+          <div className="container mx-auto">
+            <div className="my-12">
+              {/* DemoNewsDataset কম্পোনেন্ট এখানে যুক্ত */}
+              {/** এখানে বাংলা ও ইংরেজি ভাষার জন্য চাইলে শিরোনাম পরিবর্তন করতে পারেন, বর্তমানে বাংলা ডেমো শিরোনাম দেওয়া আছে */}
+              <React.Suspense fallback={null}>
+                {React.createElement(require('@/components/DemoNewsDataset.jsx').default)}
+              </React.Suspense>
+            </div>
+          </div>
+        </section>
+        {/* আগের analyzeContent, TabContent এবং অন্যান্য সেকশন */}
         
         <section id="content-analyzer" className="py-16 px-4">
           <div className="container mx-auto">
