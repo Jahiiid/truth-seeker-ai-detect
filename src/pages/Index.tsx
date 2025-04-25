@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -6,6 +7,7 @@ import TabContent from '@/components/TabContent';
 import HowItWorks from '@/components/HowItWorks';
 import About from '@/components/About';
 import FoundersProfile from '@/components/FoundersProfile';
+import DemoNewsDataset from '@/components/DemoNewsDataset.jsx';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Index = () => {
@@ -21,10 +23,7 @@ const Index = () => {
           <div className="container mx-auto">
             <div className="my-12">
               {/* DemoNewsDataset কম্পোনেন্ট এখানে যুক্ত */}
-              {/** এখানে বাংলা ও ইংরেজি ভাষার জন্য চাইলে শিরোনাম পরিবর্তন করতে পারেন, বর্তমানে বাংলা ডেমো শিরোনাম দেওয়া আছে */}
-              <React.Suspense fallback={null}>
-                {React.createElement(require('@/components/DemoNewsDataset.jsx').default)}
-              </React.Suspense>
+              <DemoNewsDataset />
             </div>
           </div>
         </section>
@@ -49,3 +48,4 @@ const Index = () => {
 };
 
 export default Index;
+
